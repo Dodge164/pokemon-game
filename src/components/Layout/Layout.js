@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 import s from './Layout.module.css';
 
 export default function Layout({ title, children, urlBg, colorBg }) {
@@ -19,7 +20,7 @@ export default function Layout({ title, children, urlBg, colorBg }) {
             <h3>{title}</h3>
             <span className={s.separator}></span>
           </div>
-          <div className={`${s.desc} ${s.full}`}>{children}</div>
+          <div className={cn(s.desc, s.full)}>{children}</div>
         </article>
       </div>
     </section>
